@@ -1,0 +1,15 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "me.seeber.gradle:gradle-workspace-plugin:1.2.0-SNAPSHOT"
+    }
+}
+
+allprojects {
+    apply plugin: "me.seeber.workspace"
+}

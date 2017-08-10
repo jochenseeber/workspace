@@ -1,0 +1,9 @@
+def PROJECTS = new FileNameFinder().getFileNames(rootDir.path, "*/build.gradle").collect { String f ->
+    new File(f).parentFile.name
+}
+
+PROJECTS.each { String project ->
+    include(project)
+}
+
+
